@@ -1,0 +1,13 @@
+<div (mousemove)="move($event)" (mousedown)="down($event)" (mouseup)="drawing = false" (window:resize)="resizeCanvas()"
+  (touchstart)="touch($event)">
+  <div class="nav">
+    <button class="nav-space" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</button>
+    <button class="nav-space" [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</button>
+    <button class="nav-space" [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</button>
+    <button class="nav-space" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</button>
+    
+  </div>
+  <router-outlet></router-outlet>
+  <canvas id="canvas"></canvas>
+  <button (click)="clearDrawing()" class="clear">Clear Drawing!</button>
+</div>

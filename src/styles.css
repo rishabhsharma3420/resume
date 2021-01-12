@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'futura';
+  src: local('futura'), url(futura.otf);
+  font-weight: bold;
+  font-kerning: normal;
+  font-display: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #C1D4E2;
+  background: -webkit-linear-gradient(90deg, #C1D4E2, #FCE4E4);
+  background: linear-gradient(90deg, #C1D4E2, #FCE4E4);
+  text-align: center;
+  font-family: 'futura';
+  font-size: 30px;
+  overflow: overlay;
+}
+
+.blue {
+  background-color: #C1D4E2;
+}
+
+.pink {
+  background-color: #FCE4E4;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+button {
+  background: transparent;
+  font: inherit;
+  border: 0;
+  opacity: 0.7;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:focus {
+  outline: none;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
