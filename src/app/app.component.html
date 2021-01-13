@@ -1,12 +1,26 @@
-<div (mousemove)="move($event)" (mousedown)="down($event)" (mouseup)="drawing = false" (window:resize)="resizeCanvas()"
+<div (mousemove)="move($event)" (mousedown)="down($event)" (mouseup)="drawing=false" (window:resize)="resizeCanvas()"
   (touchstart)="touch($event)">
-  <div class="nav">
-    <button class="nav-space" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</button>
-    <button class="nav-space" [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</button>
-    <button class="nav-space" [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</button>
-    <button class="nav-space" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</button>
-    
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home </a>
+        <a class="nav-item nav-link" [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</a>
+        <a class="nav-item nav-link" [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</a>
+        <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+      <!-- <button class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</button>
+      <button class="nav-link " [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</button>
+      <button class="nav-link " [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</button>
+      <button class="nav-link " [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</button> -->
+
+  
+
   <router-outlet></router-outlet>
   <canvas id="canvas"></canvas>
   <button (click)="clearDrawing()" class="clear">Clear Drawing!</button>
