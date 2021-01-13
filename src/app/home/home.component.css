@@ -14,10 +14,12 @@
   font-size: 100px;
   line-height: 1;
 }
-.tw::after{
+
+.tw::after {
   content: " ";
   white-space: pre;
 }
+
 .subheading {
   margin: 0;
   font-size: 20px;
@@ -29,4 +31,82 @@
 
 .element {
   margin-top: 10px;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+span:nth-child(1) {
+  animation: fadeOut 4s infinite alternate;
+}
+
+span:nth-child(2) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: .5s;
+}
+
+span:nth-child(3) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 1s;
+}
+
+span:nth-child(4) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+span:nth-child(5) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 2s;
+}
+
+span:nth-child(6) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 2.5s;
+}
+
+span:nth-child(7) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 3s;
+}
+
+span:nth-child(8) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 3.5s;
+}
+
+span:nth-child(9) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 4s;
+}
+
+span:nth-child(10) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 4.5s;
+}
+
+span:nth-child(11) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 5s;
+}
+
+span:nth-child(12) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 5.5s;
+}
+
+span:nth-child(13) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 6s;
+}
+
+span:nth-child(14) {
+  animation: fadeOut 4s infinite alternate;
+  animation-delay: 6.5s;
 }

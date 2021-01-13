@@ -18,6 +18,8 @@ import { ExperienceComponent } from './experience/experience.component';
 // services
 import { HomeService } from './home/home.service';
 import { TypingAnimationDirective } from 'angular-typing-animation';
+import { createIncrementalCompilerHost } from 'typescript';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { TypingAnimationDirective } from 'angular-typing-animation';
   ],
   imports: [
     // required
+    CommonModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,
