@@ -7,7 +7,7 @@ function move(card, index) {
 function fade(card, index) {
     setTimeout(function () {
         card.querySelector('.content').classList.toggle('loaded');
-    }, 100 * index);
+    }, 1 * index);
 }
 
 function load() {
@@ -16,5 +16,5 @@ function load() {
     cards.forEach(move);
     setTimeout(function () {
         cards.forEach(fade);
-    }, 100 * cards.length);
+    }, 1 * cards.length);
 }
