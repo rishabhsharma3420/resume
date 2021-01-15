@@ -1,65 +1,80 @@
 
-.deck {
+.cards {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
   justify-content: center;
   margin: 0;
-  overflow: hidden;
   padding: 0;
 }
 
+svg{
+  padding:1%
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 +5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cards_item {
+  display: flex;
+
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 .card {
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: .5em;
-  box-sizing: border-box;
-  height: 2em;
-  margin: .5em;
-  opacity: 50%;
-  padding-top: 10px;
-  position: relative;
-  transform: translateX(100vw) translateY(100vh) rotate(15deg);
-  /* -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; */
-  transition: all 1s ease-out;
-  width: 9em;
-}
-
-.card .content {
-  opacity: 0;
-  transition: all 2s ease-out;
-}
-
-.card.loaded {
-  opacity: 1;
-  transform: translateX(0) translateY(0) rotate(0);
-}
-
-.card.loaded .content.loaded {
-  opacity: 1;
-}
-.a{
-  visibility: visible;
-}
-.b{
-  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  padding: 16px;
 }
 .card:hover{
-  animation: pulse 2.5s infinite
+  animation: pulse 4s infinite;
 }
+.card_content {
+  padding: 1rem;
+}
+
+.card_title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
 @keyframes pulse {
   0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
-
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

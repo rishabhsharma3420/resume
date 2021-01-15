@@ -12,6 +12,7 @@
 .john {
   margin: 0;
   font-size: 100px;
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -35,10 +36,10 @@
 
 @keyframes fadeOut {
   from {
-    opacity: 0;
+    color:rgb(33, 94, 92)
   }
   to {
-    opacity: 1;
+    color:rgba(23, 37, 42)
   }
 }
 

@@ -20,6 +20,9 @@ import { HomeService } from './home/home.service';
 import { TypingAnimationDirective } from 'angular-typing-animation';
 import { createIncrementalCompilerHost } from 'typescript';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -40,9 +43,12 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     BrowserModule,
+    MatIconModule,
+    BrowserAnimationsModule,
     // routing
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    
   ],
   providers: [
     // services

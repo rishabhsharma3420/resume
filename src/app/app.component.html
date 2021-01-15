@@ -1,27 +1,25 @@
 <div (mousemove)="move($event)" (mousedown)="down($event)" (mouseup)="drawing=false" (window:resize)="resizeCanvas()"
   (touchstart)="touch($event)">
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home </a>
-        <a class="nav-item nav-link" [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</a>
-        <a class="nav-item nav-link" [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</a>
-        <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
+        <a class="nav-item nav-link" style="font-size: 30px;" [routerLink]="['/home']" routerLinkActive="router-link-active">Home </a>
+        <a class="nav-item nav-link" style="font-size: 30px;" [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</a>
+        <a class="nav-item nav-link" style="font-size: 30px;" [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</a>
+        <a class="nav-item nav-link" style="font-size: 30px;" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
+        
+      </div>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" title="Download resume PDF"><mat-icon style="font-size: 35px !important; margin-top: -20px;">cloud_download</mat-icon></a>
       </div>
     </div>
   </nav>
 
-      <!-- <button class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</button>
-      <button class="nav-link " [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</button>
-      <button class="nav-link " [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</button>
-      <button class="nav-link " [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</button> -->
-
-  
-
   <router-outlet></router-outlet>
   <canvas id="canvas"></canvas>
   <button (click)="clearDrawing()" class="clear">Clear Drawing!</button>
+  <span class="discription">Click &amp; drag anywhere in the empty space to Draw!</span>
 </div>

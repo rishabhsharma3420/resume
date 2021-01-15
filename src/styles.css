@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'futura';
-  src: local('futura'), url(futura.otf);
+  src: local('Merriweather-Regular'), url(MerriweatherSans-Regular.ttf);
   font-weight: bold;
   font-kerning: normal;
   font-display: auto;
@@ -11,21 +11,12 @@ html {
 }
 
 body {
-  background: #C1D4E2;
-  background: -webkit-linear-gradient(90deg, #C1D4E2, #FCE4E4);
-  background: linear-gradient(90deg, #C1D4E2, #FCE4E4);
+  background: #def2f1;
   text-align: center;
   font-family: 'futura';
   font-size: 30px;
   overflow: overlay;
-}
-
-.blue {
-  background-color: #C1D4E2;
-}
-
-.pink {
-  background-color: #FCE4E4;
+  color:#17252A;
 }
 
 .center {

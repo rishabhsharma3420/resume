@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.canvas = <HTMLCanvasElement> document.getElementById('canvas');
     this.ctx = this.canvas.getContext('2d');
     this.gradient = this.ctx.createLinearGradient(0, 0, window.innerWidth, window.innerHeight);
-    this.setCanvasGradient('#FCE4E4', '#C1D4E2');
+    this.setCanvasGradient('#2b7a78', '#2b7a78');
     this.resizeCanvas();
   }
 
@@ -46,11 +46,11 @@ export class AppComponent implements OnInit {
     if (this.drawing) {
       this.ctx.beginPath();
       this.ctx.strokeStyle = this.gradient;
-      this.ctx.lineWidth = 7;
+      this.ctx.lineWidth = 5;
       this.ctx.lineJoin = 'round';
       this.ctx.moveTo(this.lastX, this.lastY);
       this.ctx.lineTo(x, y);
-      if (Math.abs(x - this.lastX) < 30 && Math.abs(y - this.lastY) < 30) {
+      if (Math.abs(x - this.lastX) < 144 && Math.abs(y - this.lastY) < 144) {
         this.ctx.closePath();
         this.ctx.stroke();
       }
